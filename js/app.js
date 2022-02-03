@@ -12,17 +12,13 @@ btnSubmitElement.addEventListener('click', event => {
     ulElement.appendChild(newListElement)
     inpElement.value = ''
   }
-  console.log('getting invoked')
 });
 
 //Reset
 btnResetElement.addEventListener('click', event => {
   let allListElements = document.querySelectorAll('li')
   allListElements.forEach(arg => ulElement.removeChild(arg))
-  console.log('getting woke')
 });
 
 //Clean
-ulElement.addEventListener('click', event => {
-  ulElement.removeChild(event.target) 
-  caddonsole.log('hey')});
+ulElement.addEventListener('click', event => ulElement.removeChild(event.target));
