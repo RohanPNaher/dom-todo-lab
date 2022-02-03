@@ -5,7 +5,7 @@ const ulElement = document.getElementById('todo-list')
 const btnResetElement = document.getElementById('reset-button')
 
 console.log(inpElement, btnSubmitElement, ulElement, btnResetElement)
-
+//Add to list
 btnSubmitElement.addEventListener('click', event => {
   let newListElement = document.createElement('li')
   newListElement.textContent = inpElement.value 
@@ -15,7 +15,13 @@ btnSubmitElement.addEventListener('click', event => {
   }
 });
 
+//Reset
 btnResetElement.addEventListener('click', event => {
   let allListElements = document.querySelectorAll('li')
   allListElements.forEach(arg => ulElement.removeChild(arg))
+});
+
+//Clean
+ulElement.addEventListener('click', event => {
+  ulElement.removeChild(event.target)
 });
